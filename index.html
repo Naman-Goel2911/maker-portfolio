@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naman Goel - Makers Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Startup Animation Overlay -->
+    <div id="startup-overlay" class="startup-overlay">
+        <div class="startup-content">
+            <div class="boot-sequence">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="terminal-title">SYSTEM BOOT (click to skip!)</span>
+                        <div class="terminal-controls">
+                            <span class="control minimize"></span>
+                            <span class="control maximize"></span>
+                            <span class="control close"></span>
+                        </div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="boot-line" data-text="Initializing Makers Portfolio..."></div>
+                        <div class="boot-line" data-text="Loading Naman Goel's projects..."></div>
+                        <div class="boot-line" data-text="Connecting to space systems... [OK]"></div>
+                        <div class="boot-line" data-text="Calibrating rover dynamics... [OK]"></div>
+                        <div class="boot-line" data-text="Syncing with asteroid detection algorithms... [OK]"></div>
+                        <div class="boot-line" data-text="Booting autonomous robotics... [OK]"></div>
+                        <div class="boot-line" data-text="System ready. Welcome to the future."></div>
+                        <div class="boot-cursor">_</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cosmic Background Canvas -->
+    <canvas id="cosmos"></canvas>
+
+    <!-- Site Header -->
+    <header class="site-header" id="site-header">
+        <div class="wrap">
+            <a href="#" class="brand" aria-label="Naman Goel Portfolio">
+                <img src="image.png" alt="Naman Goel" class="brand-logo">
+            </a>
+            <nav class="nav" role="navigation">
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#research" class="nav-link" data-section="research">Research</a>
+                <a href="#leadership" class="nav-link" data-section="leadership">Leadership</a>
+                <a href="#community" class="nav-link" data-section="community">Community</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Landing Section - Just the card -->
+        <section class="section landing" id="landing">
+            <div class="mission-patch">
+                <img src="your-photo.jpg" alt="Naman Goel" class="mission-patch-photo">
+            </div>
+
+            <div class="title-card-container">
+                <div class="title-card" id="title-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="hologram-effect"></div>
+                            <div class="card-circuits">
+                                <div class="circuit-line circuit-1"></div>
+                                <div class="circuit-line circuit-2"></div>
+                                <div class="circuit-line circuit-3"></div>
+                                <div class="circuit-dot dot-1"></div>
+                                <div class="circuit-dot dot-2"></div>
+                                <div class="circuit-dot dot-3"></div>
+                            </div>
+                            <h1 class="card-title">
+                                <span class="line primary">NAMAN</span>
+                                <span class="line secondary">GOEL</span>
+                            </h1>
+                        </div>
+                        <div class="card-back">
+                            <div class="data-stream">
+                                <div class="data-line">MAKER • ENGINEER • INNOVATOR</div>
+                                <div class="data-line">SPACE TECH • ROBOTICS • AI</div>
+                                <div class="data-line">HIGH SCHOOL SENIOR • INDIA</div>
+                                <div class="data-line">BUILDING THE FUTURE</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="scroll-text">Discover My Work</p>
+            </div>
+        </section>
+
+        <!-- Description Section -->
+        <section class="section about-me" id="about">
+            <div class="content">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2 class="section-heading">Building Tomorrow's Technology</h2>
+                        <p class="intro-text">
+                            I'm a high school maker passionate about space technology, autonomous systems, and engineering innovation. 
+                            From designing rover recovery systems for Mars to building self-balancing robots, I bridge the gap between 
+                            theoretical concepts and practical solutions.
+                        </p>
+
+                        <div class="maker-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">20+</span>
+                                <span class="stat-label">Nozzle Designs Simulated</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">6</span>
+                                <span class="stat-label">Asteroid Detections</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">35+</span>
+                                <span class="stat-label">Students Mentored</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h3>Hardware</h3>
+                                <ul>
+                                    <li>ESP32 & Microcontrollers</li>
+                                    <li>Motor Drivers & Sensors</li>
+                                    <li>Circuit Design & Soldering</li>
+                                    <li>3D Modeling (Fusion 360)</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h3>Software</h3>
+                                <ul>
+                                    <li>C/C++ Programming</li>
+                                    <li>Python & AI/ML</li>
+                                    <li>ANSYS Fluent Simulation</li>
+                                    <li>Web Development</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h3>Tools & Platforms</h3>
+                                <ul>
+                                    <li>Arduino IDE</li>
+                                    <li>Astrometrica (Astronomy)</li>
+                                    <li>Autodesk Fusion 360</li>
+                                    <li>GitHub & Version Control</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="maker-showcase">
+                            <div class="showcase-item active">
+                                <div class="showcase-icon">🚀</div>
+                                <h4>Space Systems</h4>
+                                <p>Designing propulsion systems for extraterrestrial rovers</p>
+                            </div>
+                            <div class="showcase-item">
+                                <div class="showcase-icon">🤖</div>
+                                <h4>Autonomous Robotics</h4>
+                                <p>Building self-balancing vehicles with advanced sensors</p>
+                            </div>
+                            <div class="showcase-item">
+                                <div class="showcase-icon">🔬</div>
+                                <h4>Research & Innovation</h4>
+                                <p>Contributing to asteroid discovery and planetary defense</p>
+                            </div>
+                            <div class="showcase-item">
+                                <div class="showcase-icon">👥</div>
+                                <h4>Community Impact</h4>
+                                <p>Teaching programming and inspiring the next generation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Maker Projects Section -->
+        <section class="section projects" id="projects">
+            <div class="content">
+                <h2 class="section-title">
+                    <span class="section-number">01</span>
+                    <span class="section-name">Maker Projects</span>
+                </h2>
+
+                <div class="project">
+                    <div class="project-media">
+                        <picture class="project-media-picture">
+                            <source srcset="nozzle.png" type="image/avif">
+                            <source srcset="nozzle.png" type="image/webp">
+                            <img src="nozzle.png" alt="CFD nozzle simulations for Mars rover recovery" loading="lazy" width="1200" height="800">
+                        </picture>
+                        <div class="project-caption">ANSYS Fluent nozzle flow visualization</div>
+                        <div class="project-overlay">
+                            <button class="view-specs" data-open="#rover-specs">View Technical Specs</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Mars Rover Recovery System</h3>
+                            <div class="status completed">Research Paper</div>
+                        </div>
+                        <p class="project-description">
+                            Designed and validated a compressed air thrust system for emergency rover recovery on challenging Martian terrain. 
+                            Used ANSYS Fluent to simulate 20+ nozzle geometries and authored a research paper on the feasibility of the system.
+                        </p>
+                        <div class="tech-specs">
+                            <div class="spec">
+                                <span class="spec-label">Simulation Tool</span>
+                                <span class="spec-value">ANSYS Fluent CFD</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Nozzle Designs</span>
+                                <span class="spec-value">20+ Geometries</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Application</span>
+                                <span class="spec-value">Extraterrestrial Mobility</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-media">
+                        <picture class="project-media-picture">
+                            <source srcset="pendulum.jpeg" type="image/avif">
+                            <source srcset="pendulum.jpeg" type="image/webp">
+                            <img src="pendulum.jpeg" alt="ESP32 self-balancing inverted pendulum robot" loading="lazy" width="1200" height="800">
+                        </picture>
+                        <div class="project-caption">Self balancing inverted pendulum</div>
+                        <div class="project-overlay">
+                            <button class="view-specs" data-open="#balancing-specs">View Technical Specs</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Inverted Pendulum Balancer</h3>
+                            <div class="status prototype">Hardware Project</div>
+                        </div>
+                        <p class="project-description">
+                            Built an autonomous inverted pendulum balancing mechanism using ESP32, MPU6050 sensors, and custom control algorithms. 
+                            Integrated hardware-software systems with real-time feedback control and custom woodwork support frame.
+                        </p>
+                        <div class="tech-specs">
+                            <div class="spec">
+                                <span class="spec-label">Microcontroller</span>
+                                <span class="spec-value">ESP32-WROOM</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Sensors</span>
+                                <span class="spec-value">MPU6050 IMU</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Control</span>
+                                <span class="spec-value">PID Algorithm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-media">
+                        <picture class="project-media-picture">
+                            <source srcset="robo.jpg" type="image/avif">
+                            <source srcset="robo.jpg" type="image/webp">
+                            <img src="robo.jpg" alt="Mecanum-wheeled omnidirectional RC car" loading="lazy" width="1200" height="800">
+                        </picture>
+                        <div class="project-caption">Top view of mechanum wheeled car</div>
+                        <div class="project-overlay">
+                            <button class="view-specs" data-open="#mecanum-specs">View Technical Specs</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Omnidirectional RC Car</h3>
+                            <div class="status completed">Featured on IIT GitHub</div>
+                        </div>
+                        <p class="project-description">
+                            Engineered a mecanum-wheeled vehicle capable of omnidirectional movement. Featured as the first high school project 
+                            on IIT Madras GitHub and invited to present to undergraduate students. Programmed in C with HTML interface.
+                        </p>
+                        <div class="tech-specs">
+                            <div class="spec">
+                                <span class="spec-label">Mobility</span>
+                                <span class="spec-value">Omnidirectional</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Controllers</span>
+                                <span class="spec-value">ESP8266 + L298N</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Recognition</span>
+                                <span class="spec-value">IIT Madras Featured</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-media">
+                        <div class="project-image-placeholder">
+                            <div class="placeholder-content">
+                                <div class="placeholder-icon">🤖</div>
+                                <div class="placeholder-text">AI Chatbot System</div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="view-specs" data-open="#chatbot-specs">View Technical Specs</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Educational AI Chatbot</h3>
+                            <div class="status completed">Competition Winner</div>
+                        </div>
+                        <p class="project-description">
+                            Developed an intelligent chatbot for addressing student academic queries using Python, HTML, and APIs. 
+                            Won the Technovanza city-wide chatbot building competition, demonstrating natural language processing capabilities.
+                        </p>
+                        <div class="tech-specs">
+                            <div class="spec">
+                                <span class="spec-label">Languages</span>
+                                <span class="spec-value">Python, HTML, CSS</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">APIs</span>
+                                <span class="spec-value">NLP Integration</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Achievement</span>
+                                <span class="spec-value">1st Place Winner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-media">
+                        <div class="project-image-placeholder">
+                            <div class="placeholder-content">
+                                <div class="placeholder-icon">🌐</div>
+                                <div class="placeholder-text">Exam Portal System</div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="view-specs" data-open="#portal-specs">View Technical Specs</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3>Online Examination Portal</h3>
+                            <div class="status completed">National Hackathon</div>
+                        </div>
+                        <p class="project-description">
+                            Led a team of 5 to develop a comprehensive online examination portal with AI-driven features. 
+                            Designed full-stack architecture using JavaScript, HTML, CSS with Firebase database integration.
+                        </p>
+                        <div class="tech-specs">
+                            <div class="spec">
+                                <span class="spec-label">Frontend</span>
+                                <span class="spec-value">HTML, CSS, JavaScript</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Backend</span>
+                                <span class="spec-value">Firebase Database</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Team Size</span>
+                                <span class="spec-value">5 Members</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section class="section research" id="research">
+            <div class="content">
+                <h2 class="section-title">
+                    <span class="section-number">02</span>
+                    <span class="section-name">Research & Discovery</span>
+                </h2>
+
+                <div class="research-grid">
+                    <div class="research-item">
+                        <div class="research-icon">🔭</div>
+                        <h3>Asteroid Discovery Program</h3>
+                        <p>Contributing to planetary defense through asteroid discovery using Pan-STARRS telescope data and Astrometrica software. 
+                        Reviewed 50+ image sets and contributed 6 preliminary asteroid detections to the Minor Planet Center.</p>
+                        <div class="research-stats">
+                            <div class="stat">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Image Sets Analyzed</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">6</span>
+                                <span class="stat-label">Asteroid Detections</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="research-item">
+                        <div class="research-icon">🔬</div>
+                        <h3>Sustainable Agriculture Research</h3>
+                        <p>Spearheaded aquaponics solution research integrating fish cultivation with crop irrigation. 
+                        Created detailed 3D visualizations using Blender and presented findings to Delhi University faculty.</p>
+                        <div class="research-achievement">Published at Zonal Science Seminar</div>
+                    </div>
+
+                    <div class="research-item">
+                        <div class="research-icon">🌾</div>
+                        <h3>Millets Superfood Study</h3>
+                        <p>Researched nutritional and environmental benefits of millets as sustainable food alternatives. 
+                        Analyzed their potential for addressing global food security challenges.</p>
+                        <div class="research-achievement">Delhi University Presentation</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section class="section leadership" id="leadership">
+            <div class="content">
+                <h2 class="section-title">
+                    <span class="section-number">03</span>
+                    <span class="section-name">Leadership Impact</span>
+                </h2>
+
+                <div class="leadership-grid">
+                    <div class="leadership-item">
+                        <div class="leadership-header">
+                            <h3>Science Society Co-Founder</h3>
+                            <div class="members">80 Members</div>
+                        </div>
+                        <p>
+                            Co-founded and led the school Science Society, managing a 7-person IT team to design and maintain the society website. 
+                            Organized national-level online events with 100+ participants from 23 schools across India.
+                        </p>
+                        <div class="achievement">National STEM Competition Host</div>
+                    </div>
+
+                    <div class="leadership-item">
+                        <div class="leadership-header">
+                            <h3>Student Council IT Head</h3>
+                            <div class="members">1400 Students</div>
+                        </div>
+                        <p>
+                            Selected to lead digital strategy and technology initiatives for the entire student body. 
+                            Conceptualized and produced the school yearbook for 300 graduating students while managing technical execution of major events.
+                        </p>
+                        <div class="achievement">Yearbook Production Lead</div>
+                    </div>
+
+                    <div class="leadership-item">
+                        <div class="leadership-header">
+                            <h3>School Prefect</h3>
+                            <div class="members">320 Peers</div>
+                        </div>
+                        <p>
+                            Advocated on behalf of 320 peers to the Student Council and school administration. 
+                            Contributed to maintaining discipline and fostering a positive learning environment during school hours.
+                        </p>
+                        <div class="achievement">2-Year Leadership Role</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section class="section community" id="community">
+            <div class="content">
+                <h2 class="section-title">
+                    <span class="section-number">04</span>
+                    <span class="section-name">Community Impact</span>
+                </h2>
+
+                <div class="impact-stats">
+                    <div class="impact">
+                        <span class="impact-number">30+</span>
+                        <span class="impact-label">Students Taught Programming</span>
+                    </div>
+                    <div class="impact">
+                        <span class="impact-number">8</span>
+                        <span class="impact-label">Underprivileged Kids Mentored</span>
+                    </div>
+                    <div class="impact">
+                        <span class="impact-number">3</span>
+                        <span class="impact-label">Astronomy Events Organized</span>
+                    </div>
+                </div>
+
+                <div class="community-projects">
+                    <div class="community-item">
+                        <h3>Code in Place Instructor</h3>
+                        <p>
+                            Selected as a Section Leader for Stanford's Code in Place program, teaching Python programming to 30 international students. 
+                            Completed specialized instructor training and guided students through algorithmic problem-solving.
+                        </p>
+                    </div>
+
+                    <div class="community-item">
+                        <h3>UPAY NGO Volunteer</h3>
+                        <p>
+                            Initiated and conducted weekly computer literacy classes for 5 underserved students aged 7-16 in Hindi. 
+                            Used familiar analogies to explain complex programming concepts and make technology accessible.
+                        </p>
+                    </div>
+
+                    <div class="community-item">
+                        <h3>Neighborhood Astronomy Club</h3>
+                        <p>
+                            Founded and organized rooftop stargazing events, explaining astronomical concepts and guiding participants in identifying celestial bodies. 
+                            Built an organic community of space enthusiasts across age groups.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="contact-block" id="contact">
+                    <h3>Let's Build Something Amazing Together</h3>
+                    <p>Interested in collaborating on space tech, robotics, or educational projects? Let's connect and create the future.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:thenaman.goel@gmail.com" class="contact-btn primary">Email Me</a>
+                        <a href="https://linkedin.com/in/naman-goel-29k" class="contact-btn" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/Naman-Goel2911" class="contact-btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Technical Specifications Modals -->
+    <dialog class="spec-modal" id="rover-specs">
+        <div class="modal-content">
+            <button class="modal-close" data-close>&times;</button>
+            <h3>Mars Rover Recovery System - Technical Specifications</h3>
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <span class="spec-label">Research Focus</span>
+                    <span class="spec-value">Compressed air thrust system for emergency rover recovery on challenging extraterrestrial terrain</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Simulation Software</span>
+                    <span class="spec-value">ANSYS Fluent CFD Module</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Nozzle Designs</span>
+                    <span class="spec-value">20+ different geometries analyzed and optimized</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Application</span>
+                    <span class="spec-value">Extraterrestrial rover mobility on Mars and other challenging terrain</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Status</span>
+                    <span class="spec-value">Research paper authored and submitted for publication review</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Innovation</span>
+                    <span class="spec-value">Novel approach to rover recovery using compressed air propulsion</span>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog class="spec-modal" id="balancing-specs">
+        <div class="modal-content">
+            <button class="modal-close" data-close>&times;</button>
+            <h3>Inverted Pendulum Balancer - Technical Specifications</h3>
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <span class="spec-label">Microcontroller</span>
+                    <span class="spec-value">ESP32-WROOM with WiFi capabilities</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Sensors</span>
+                    <span class="spec-value">MPU6050 6-axis IMU for real-time orientation feedback</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Motor Control</span>
+                    <span class="spec-value">L298N motor drivers with PWM speed control</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Control Algorithm</span>
+                    <span class="spec-value">PID controller with real-time feedback loop</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Construction</span>
+                    <span class="spec-value">Custom woodwork support frame with precision assembly</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Skills Developed</span>
+                    <span class="spec-value">Hardware-software integration, soldering, circuit design, control systems</span>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog class="spec-modal" id="mecanum-specs">
+        <div class="modal-content">
+            <button class="modal-close" data-close>&times;</button>
+            <h3>Omnidirectional RC Car - Technical Specifications</h3>
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <span class="spec-label">Wheel System</span>
+                    <span class="spec-value">Mecanum wheels for omnidirectional movement</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Controller</span>
+                    <span class="spec-value">ESP8266 with WiFi remote control capability</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Motor Drivers</span>
+                    <span class="spec-value">L298N dual H-bridge for 4-wheel independent control</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Programming</span>
+                    <span class="spec-value">C programming with HTML web interface</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Movement</span>
+                    <span class="spec-value">Forward, backward, sideways, diagonal, and rotational movement</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Recognition</span>
+                    <span class="spec-value">Featured on IIT Madras GitHub as first high school project</span>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog class="spec-modal" id="chatbot-specs">
+        <div class="modal-content">
+            <button class="modal-close" data-close>&times;</button>
+            <h3>Educational AI Chatbot - Technical Specifications</h3>
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <span class="spec-label">Backend Language</span>
+                    <span class="spec-value">Python with natural language processing libraries</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Frontend</span>
+                    <span class="spec-value">HTML, CSS for user interface design</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">API Integration</span>
+                    <span class="spec-value">Multiple APIs for enhanced response generation</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Purpose</span>
+                    <span class="spec-value">Address student academic queries efficiently</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Competition</span>
+                    <span class="spec-value">1st Place Winner - Technovanza Chatbot Building Competition</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Features</span>
+                    <span class="spec-value">Natural language understanding, contextual responses, educational content</span>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog class="spec-modal" id="portal-specs">
+        <div class="modal-content">
+            <button class="modal-close" data-close>&times;</button>
+            <h3>Online Examination Portal - Technical Specifications</h3>
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <span class="spec-label">Frontend Technologies</span>
+                    <span class="spec-value">HTML5, CSS3, JavaScript (ES6+)</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Database</span>
+                    <span class="spec-value">Firebase Realtime Database with cloud storage</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Team Leadership</span>
+                    <span class="spec-value">Led a cross-functional team of 5 developers</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">AI Features</span>
+                    <span class="spec-value">AI-driven chatbot for student assistance</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Competition</span>
+                    <span class="spec-value">Runner-up at National Hackathon 1.0</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Features</span>
+                    <span class="spec-value">Real-time exam monitoring, automated grading, secure authentication</span>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="def.js"></script>
+</body>
+</html>
