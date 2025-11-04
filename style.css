@@ -207,6 +207,22 @@ body {
     transition: all 0.3s ease;
 }
 
+.nav-link--resume {
+    background: linear-gradient(135deg, var(--accent), #ffed4e);
+    color: var(--bg);
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px var(--accent-glow);
+}
+
+.nav-link--resume:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+
 .site-header.minimized .nav-link {
     padding: 6px 10px;
     font-size: 0.85rem;
@@ -665,12 +681,22 @@ body {
 }
 
 .project-overlay {
-    position: absolute; inset: 0; background: rgba(0,0,0,0.8);
-    display: flex; align-items: center; justify-content: center;
-    opacity: 0; transition: opacity 0.3s ease;
+    position: absolute; 
+    inset: 0; 
+    background: rgba(0,0,0,0.8);
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    pointer-events: none;  /* Keep this for when hidden */
 }
 
-.project-media:hover .project-overlay { opacity: 1; }
+.project-media:hover .project-overlay { 
+    opacity: 1; 
+    pointer-events: auto;  /* Add this line - enable clicks when visible */
+}
+
 .project-media:hover img { transform: scale(1.05); }
 
 .view-specs {
@@ -903,10 +929,29 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* Spec Modal */
 .spec-modal {
-    background: rgba(0,0,0,0.8); border: none; border-radius: 12px;
-    max-width: 700px; width: 90%;
+    display: none;  /* Hidden by default */
+    background: rgba(0,0,0,0.8);
+    border: none;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 90%;
+}
+
+.spec-modal[open] {
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.spec-modal::backdrop {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
@@ -1055,4 +1100,22 @@ body {
   color: #fff;
   padding: 10px 14px;
   font-size: 0.9rem;
+}
+
+/* Clickable status buttons */
+.status-link {
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.status-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+}
+
+.status-link:active {
+    transform: translateY(0);
 }

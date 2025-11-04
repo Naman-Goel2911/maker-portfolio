@@ -432,51 +432,95 @@ function typewriterEffect(element, text, speed = 50) {
 
 /* Modal Handlers */
 (() => {
-    const specButtons = $$('[data-open]');
-    const modals = $$('.spec-modal');
-    const closeButtons = $$('[data-close]');
-
+    console.log('Modal handlers initializing...');
+    
+    const specButtons = document.querySelectorAll('[data-open]');
+    const modals = document.querySelectorAll('.spec-modal');
+    const closeButtons = document.querySelectorAll('[data-close]');
+    
+    console.log('Found buttons:', specButtons.length);
+    console.log('Found modals:', modals.length);
+    
     // Open modals
-    specButtons.forEach(button => {
-        button.addEventListener('click', () => {
+    specButtons.forEach((button, index) => {
+        console.log(`Setting up button ${index}:`, button);
+        
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
             const modalId = button.getAttribute('data-open');
-            const modal = $(modalId);
-            if (modal && typeof modal.showModal === 'function') {
-                modal.showModal();
-                // Focus management for accessibility
-                modal.focus();
+            console.log('Button clicked! Modal ID from data-open:', modalId);
+            
+            const modal = document.querySelector(modalId);
+            console.log('Found modal element:', modal);
+            
+            if (modal) {
+                if (typeof modal.showModal === 'function') {
+                    try {
+                        modal.showModal();
+                        console.log('Modal shown successfully');
+                    } catch (err) {
+                        console.error('showModal failed:', err);
+                        modal.setAttribute('open', '');
+                        modal.style.display = 'flex';
+                    }
+                } else {
+                    modal.setAttribute('open', '');
+                    modal.style.display = 'flex';
+                }
+            } else {
+                console.error('Modal not found for ID:', modalId);
             }
         });
     });
-
+    
     // Close modals
     closeButtons.forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
             const modal = button.closest('.spec-modal');
-            if (modal && typeof modal.close === 'function') {
-                modal.close();
+            if (modal) {
+                if (typeof modal.close === 'function') {
+                    modal.close();
+                } else {
+                    modal.removeAttribute('open');
+                    modal.style.display = 'none';
+                }
             }
         });
     });
-
+    
     // Close modal when clicking backdrop
     modals.forEach(modal => {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
-                modal.close();
+                if (typeof modal.close === 'function') {
+                    modal.close();
+                } else {
+                    modal.removeAttribute('open');
+                    modal.style.display = 'none';
+                }
             }
         });
     });
-
+    
     // Close modal with Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            const openModal = $('.spec-modal[open]');
+            const openModal = document.querySelector('.spec-modal[open]');
             if (openModal) {
-                openModal.close();
+                if (typeof openModal.close === 'function') {
+                    openModal.close();
+                } else {
+                    openModal.removeAttribute('open');
+                    openModal.style.display = 'none';
+                }
             }
         }
     });
+    
+    console.log('Modal handlers setup complete');
 })();
 
 /* 3D Card Interaction */
@@ -612,7 +656,7 @@ function typewriterEffect(element, text, speed = 50) {
     skipLink.className = 'skip-link';
     skipLink.style.cssText = `
         position: absolute;
-        top: -40px;
+        top: -50px;
         left: 6px;
         background: var(--accent);
         color: var(--bg);
@@ -628,7 +672,7 @@ function typewriterEffect(element, text, speed = 50) {
     });
 
     skipLink.addEventListener('blur', () => {
-        skipLink.style.top = '-40px';
+        skipLink.style.top = '-50px';
     });
 
     document.body.insertBefore(skipLink, document.body.firstChild);
